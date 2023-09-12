@@ -201,6 +201,15 @@ fieldset {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 768px) {
+    /* 데스크탑 공통 */
+    .appHeader, .menu__list, .appMain, .appFooter{
+        max-width: var(--container-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
   /* 데스크탑 헤더 */
   .appHeader {
     display: grid;
@@ -232,5 +241,44 @@ fieldset {
   /* 데스크탑 메인 메뉴 제어 버튼 */
   .buttonWrapper {
     display: none;
+  }
+
+  /* 데스크탑 메인 메뉴 */
+  .menu{    
+    background-color: var(--secondary-color);
+    color: var(--white);    
+
+  }
+
+
+  /* 공통 멤버서비스 */
+/* .memberOnly {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  } */
+
+  .menu__list{
+    display: flex;
+    flex-flow: row nowrap; /*row면서 줄바꿈 금지*/
+    /* background-color: blue;     */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+
+  }
+  .menu__item{
+    padding: 0.5rem 0;
+    margin:0 20px;
+  }
+
+  .menu__link{
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 0;
   }
 }
