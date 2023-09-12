@@ -1,11 +1,101 @@
 @import url("normalize.css");
 @import url("base.css");
 @import url("theme.css");
-@import url("style.css");
+/*@import url("style.css");*/
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 숨김콘텐츠 */
+/* 접근가능한 숨김콘텐츠 만들기 - 검색폼 안보이게 하기  */
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* 컨테이너 */
+.container{
+    min-width: 16.25rem; /*뷰포트 아무리 작아져도 16.25rem 이하는 레이아웃 안깨짐 안됨*/
+}
+
+
+/* 헤더 */
 .appHeader{
-
-
     background-color: var(--primary-color);
-    color: var(--white)
+    color: var(--white);
+    display: flex;
+    
+    /* 줄바꿈을 flex-flow 사용 */
+    flex-flow: row wrap; 
+    padding: var(--spacing-base) var(--spacing-lg);  
+}
+
+
+.logo{
+    width: 100%;
+}
+
+
+/* 로고 */
+.logo__link{
+    display: block;
+
+    /* background-color: blue; */
+    width: 12.75rem;
+    height: 3.75rem;
+    /*수치 일일이 다 확인해야 하나..피그마에서 가져올 수는 없나*/
+
+    /* background-image: url("../images/webcafe-logo.png"); */ /*작은사이즈*/
+    background-image: url("../images/webcafe-logo@2x.png");     /*큰사이즈*/
+    background-size: cover; /*분명 큰 이미지였는데 상자사이즈에 맞춰서 보이게 함. 큰이미지 준비해서 background-size: cover로 하면 반응형 가능*/
+}
+
+/* 로그인, 회원가입, 커뮤니트 세로줄을 -> 가로줄로  */
+
+/* 멤버 서비스 */
+.memberOnly{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    order: -1;
+}
+
+/* 검색폼 */
+.searchForm{
+    width: 100%;
+}
+
+/*  부모컨테이너에 스타일링 */
+.searchForm__group{
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+
+.formInput{
+    background-color: yellow;
+    flex-grow: 1;
+
+    /* &__input {
+        width: 100%;
+    } */
+}
+
+.formInput__input{
+    width: 100%;
+}
+
+
+.searchForm .button{
+    white-space: nowrap;   /*줄바꿈 금지를 white-space로 처리*/
 }
