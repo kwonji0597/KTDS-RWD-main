@@ -41,7 +41,7 @@ body {
 /* 공통 헤더 */
 .appHeader {
   position: relative;
-  padding: var(--spacing-base) var(--spacing-lg) 0;
+  padding: var(--spacing-base) var(--spacing-lg) 16px;
 }
 
 /* 공통 로고 */
