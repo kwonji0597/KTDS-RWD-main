@@ -368,6 +368,33 @@ iframe {
 }
 
 
+/* 공통 트위터 */
+.twitter__userInfo {
+  display: inline-flex;
+}
+
+.twitter__userProfile {
+  float: right;
+  shape-outside: circle(50%);
+  shape-margin: 1em;
+  width: clamp(60px, 20%, 80px); /*clamp 함수 최소크기 최대크기*/
+  aspect-ratio: 1/1;
+}
+
+.twitter__userProfileImage {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 100%;  /*원하는 위치*/
+}
+
+.twitter__summary {
+  margin: var(--spacing-sm) 0 var(--spacing-xs) 0;
+}
+
+
+
 /* 모바일 디바이스 */
 
 /* 디자인시 공통, 모바일(S),  태블릿(M), 데스크탑(L)으로 디자인되어야 한다 */
