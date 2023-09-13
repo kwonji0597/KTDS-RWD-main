@@ -118,7 +118,31 @@ fieldset {
   gap: var(--spacing-xs);
 }
 
+/* 공통 메인 메뉴 */
+.menu__list{
+  background: #ff0;
+  padding: var(--spacing-lg);
+}
+
+.menu__item{
+  border-bottom: 1px solid #121212;
+}
+
+.menu__link{
+  display: block;
+  padding: var(--spacing-xs) 0;
+  /* a태그는 인라인속성이라 안먹힘. 블록속성으로 바꿔야 먹힘 */
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+
+
 /* 모바일 디바이스 */
+
+/* 디자인시 공통, 모바일(S),  태블릿(M), 데스크탑(L)으로 디자인되어야 한다 */
+/* 아래는 최소 320px ~ 최대 757px까지 디자인 보임. 그래서 범위 외는 디자인 안보여서 공통이 필요 */
 @media (min-width: 320px) and (max-width: 767px) {
   /* 모바일 헤더 */
   .appHeader {
@@ -234,8 +258,10 @@ fieldset {
   }
 
   .formInput__input {
+/* 
     border: 1px solid #aaa;
     border-radius: 4px;
+   */
   }
 
   /* 데스크탑 메인 메뉴 제어 버튼 */
@@ -261,6 +287,8 @@ fieldset {
   } */
 
   .menu__list{
+    background-color: transparent;
+    padding: 0;    
     display: flex;
     flex-flow: row nowrap; /*row면서 줄바꿈 금지*/
     /* background-color: blue;     */
@@ -271,14 +299,17 @@ fieldset {
 
   }
   .menu__item{
+    border-bottom: 0;
     padding: 0.5rem 0;
     margin:0 20px;
   }
 
   .menu__link{
 
-    font-size: 1.2rem;
+    /* 공통에 정의되어 있어 아래 지움 */
+
+    /* font-size: 1.2rem;
     font-weight: 700;
-    padding: 1rem 0;
+    padding: 1rem 0; */
   }
 }
