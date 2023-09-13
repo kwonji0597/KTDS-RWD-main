@@ -1,0 +1,26 @@
+
+
+body{
+    margin: 50px;
+}
+
+.box{
+    border: 5px solid blue;
+    padding: 20px;
+}
+
+.inner_box1{
+    background: yellow;
+}
+
+.inner_box2{
+    background: pink;
+}
+
+.inner_box3{
+    background: salmon;
+}
+
+.inner_box4{
+    background: aqua;
+}
