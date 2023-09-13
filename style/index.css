@@ -227,6 +227,7 @@ fieldset {
 
 .twitter__container{
   background: yellow;
+  display: flow-root;
 }
 
 .twitter__userInfo{
@@ -235,8 +236,16 @@ fieldset {
 }
 
 .twitter__userProfile{
-  width: 100px;
   float: right;
+  shape-outside: circle(50%);
+  width: 20%;
+}
+
+.twitter__userProfileImage{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 30% 40%;
 }
 
 

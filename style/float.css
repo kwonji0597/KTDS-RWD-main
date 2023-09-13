@@ -5,22 +5,29 @@ body{
 }
 
 .box{
-    border: 5px solid blue;
-    padding: 20px;
+    border: 1px solid blue;
+    /* padding: 20px; */
+
+    /*overflow: hidden;  *//*float쓸때 부모한테 높이 지정*/
+    display: flow-root; /*float쓸때 부모한테 높이 지정 - 부모높이 잃어버리는 레이아웃 이슈 해결하는 방법*/
 }
 
 .inner_box1{
     background: yellow;
+    float: left;
 }
 
 .inner_box2{
     background: pink;
+    float: left;
 }
 
 .inner_box3{
     background: salmon;
+    float: left;
 }
 
 .inner_box4{
     background: aqua;
+    float: left;
 }
