@@ -208,6 +208,18 @@ fieldset {
   margin-top: var(--spacing-base);
 }
 
+.news__videoContainer .iframeWrapper{
+  /* 비율 알아서 맞춰준다 ... 
+  가로비율에 맞게 높이도 플렉서블하게 바꿈..*/
+  aspect-ratio: 16/9;  /*직사각형*/
+  /*aspect-ratio: 1/1;*/ /*정사각형*/
+}
+
+.news__videoContainer iframe{
+  width: 100%;
+  height: 100%;
+}
+
 /* 모바일 디바이스 */
 
 /* 디자인시 공통, 모바일(S),  태블릿(M), 데스크탑(L)으로 디자인되어야 한다 */
