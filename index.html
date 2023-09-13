@@ -18,7 +18,9 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" 
     /><!--  폰트 pretendard -->
   <link rel="stylesheet" href="./style/index.css" />
-  <script src="js/navigation.js" defer></script>
+  
+  <!-- <script src="js/navigation.js" defer></script> -->
+
 </head>
 
 <body>
@@ -56,7 +58,7 @@
             </form>
         
             <div class="buttonWrapper">
-              <button type="button" class="button--burger button--none"
+              <button type="button" class="button--burger button--none is--active"
                 aria-label="메뉴 열기">
                 <span class="button--burgerBarTop"></span>
                 <span class="button--burgerBarMiddle"></span>
@@ -80,6 +82,15 @@
             </ul>
         </nav>
         <main class="appMain">
+<!--           
+          <section class="book">
+              <picture>
+                <source srcset="
+                ./images/banner-narrow.webp 600px, 
+                ./images/banner-wide.webp 1200px">
+                <img src="./images/banner-narrow.jpg" alt="">
+              </picture>
+           </section> -->
            <section class="book">섹션1</section>
            <section class="news">섹션2</section>
            <section class="board">섹션3</section>
