@@ -275,6 +275,33 @@ fieldset {
   font-size: var(--text-lg);
 }
 
+
+
+/* 공통 새소식 */
+.iframeWrapper {
+  position: relative;
+  padding-top: 56.25%;   /*너비가 100일때 높이 설정*/
+  padding-top: 75%;   /*너비가 100일때 높이 설정 == 4/3 == 75%*/
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;  /*부모크기만큼*/
+  height: 100%;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: var(--spacing-sm);
+}
+
+
+
 /* 모바일 디바이스 */
 
 /* 디자인시 공통, 모바일(S),  태블릿(M), 데스크탑(L)으로 디자인되어야 한다 */
