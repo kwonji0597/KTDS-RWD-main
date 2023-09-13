@@ -394,6 +394,23 @@ iframe {
 }
 
 
+/* 공통 푸터 */
+.appFooter {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xl);
+  display: flex;    
+  flex-flow: column nowrap;/* flex 컬럼방향 줄바꿈 금지 */
+  gap: var(--spacing-base);
+}
+
+.address {
+  font-style: normal;
+}
+.copyright {
+  font-size: 100%;
+}
+
 
 /* 모바일 디바이스 */
 
@@ -504,12 +521,18 @@ iframe {
     transform: translateX(0);
   }
 
+  /* 모바일 푸터 */
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
 }
 
 /* 데스크탑 디바이스 */
 @media (min-width: 768px) {
     /* 데스크탑 공통 */
-    .appHeader, .menu__list, .appMain, .appFooter{
+    .appHeader, .menu__list, .appMain{
         max-width: var(--container-width);
         margin-left: auto;
         margin-right: auto;
@@ -677,4 +700,9 @@ iframe {
     /* grid-template-rows: 200px 1fr */
     /* grid-template-rows: 100px 200px auto */
   }
+
+    /* 데스크탑 푸터 */
+    .appFooter {
+      align-items: center;
+    }
 }
