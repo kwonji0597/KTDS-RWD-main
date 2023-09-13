@@ -136,8 +136,33 @@ fieldset {
   font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠 */
+.appMain section{
+  /* height: 250px; */
+
+}
 
 
+.book{
+  background: yellow;
+  /* height: 500px !important; */
+}
+
+.news{
+  background: pink;
+}
+
+.board{
+  background: skyblue;
+}
+
+.twitter{
+  background: lime;
+}
+
+.favorite{
+  background: red;
+}
 
 /* 모바일 디바이스 */
 
@@ -208,19 +233,46 @@ fieldset {
     transform: translateY(-100%);
   }
 
-  .button--burger.is--active .button--burgerBarTop {
+  .button--burger .is--active .button--burgerBarTop {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
 
-  .button--burger.is--active .button--burgerBarMiddle {
+  .button--burger .is--active .button--burgerBarMiddle {
     transform: translate(-120%, -50%);
   }
 
-  .button--burger.is--active .button--burgerBarBottom {
+  .button--burger .is--active .button--burgerBarBottom {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
+
+  /* 모바일 메인 메뉴 */
+  .menu__list{
+
+    background: var(--accent-opacity-color);
+    /* 뒷배경 투명하게 처리 */
+
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    /* backdrop 필터 속성 : 뒷배경 흐릿하게 */
+    backdrop-filter: blur(2px);
+
+    transform: translateX(-150%);
+    transition: all 200ms;
+  
+ 
+  }
+
+  /* 클래스 한칸 떨어져잇으면 상위개념 */
+  .is--active.menu__list{ 
+    transform: translateX(0);
+  }
+
 }
 
 /* 데스크탑 디바이스 */
@@ -311,5 +363,87 @@ fieldset {
     /* font-size: 1.2rem;
     font-weight: 700;
     padding: 1rem 0; */
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+
+  /* grid 라인기반으로 표현하기 */
+  .appMain{
+    display: grid;
+
+    /* 열부터 만듬- fr로 12개 만들면 12개 컬럼 만들어진다 */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(12, 1fr);
+
+    /* 컬럼갭과 로우갭이 같이 들어감 */
+    grid-gap: var(--spacing-lg);
+
+    /* 이렇게 하면 아까 했던 라인기반으로 했던것과 동일하게 나와야 한다.   */
+    grid-template-areas:   
+    "news news news news news news news news news news news news"
+    "book book book book book . favorite favorite favorite twitter twitter twitter"
+    "book book book book book . board board board board board board "
+     
+  }
+  
+  /* news가 첫번째 row를 다 차지해야되기 때문에 */
+  .news{
+    /* grid-row: 1/2;
+    grid-column: 1/ -1;  */
+    /*컬럼 끝까지 차지*/
+
+    grid-area: news;  /*grid-area 네이밍 설정*/
+  }
+
+  .book{
+    /* grid-row: 2/4;    
+    grid-column: 1/6; */
+    grid-area: book;
+  }
+
+  .twitter{
+    /* grid-row: 2/3;
+    grid-column: 6/10; */
+    grid-area: twitter;
+  }
+
+  .favorite{
+    /* grid-row: 2/3;
+    grid-column: 10/13; */
+    grid-area: favorite;
+  }
+
+  .board{
+    /* grid-row: 3/3;
+    grid-column: 6/13; */
+    grid-area: board;
+  }
+
+
+  
+
+  /* 아래내용 참조 */
+/* 
+  .appHeader {
+    display: grid;
+    grid-template-columns: 204px 1fr;
+    gap: var(--spacing-base);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .container {
+    grid-template-columns: 200px 200px 500px;
+    /* grid-template-columns: 1fr 1fr 1fr */
+    /* grid-template-columns: repeat(3, 1fr) */
+    /* grid-template-columns: 200px 1fr */
+    /* grid-template-columns: 100px 200px auto */
+  
+    grid-template-rows: 200px 200px 500px;
+    /* grid-template-rows: 1fr 1fr 1fr */
+    /* grid-template-rows: repeat(3, 1fr) */
+    /* grid-template-rows: 200px 1fr */
+    /* grid-template-rows: 100px 200px auto */
   }
 }
